@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Songwriter Helper</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tonaljs/tonal@latest"></script>
+</head>
+<body>
+    <div id="app">
+        <section id="timeline-section">
+            <div class="controls">
+                <button id="prev-segment">&lt;</button>
+                <input type="range" id="segment-slider" min="0" value="0">
+                <button id="next-segment">&gt;</button>
+            </div>
+            <div id="timeline"></div>
+        </section>
+
+        <section id="fretboard-section">
+            <div id="fretboard"></div>
+        </section>
+
+        <section id="chord-info-section">
+            <div class="key-select">
+                Key: <select id="key-selector"></select>
+            </div>
+            <div id="selected-notes">Notes: </div>
+            <div id="chord-names"></div>
+        </section>
+
+        <section id="suggestion-section">
+            <h3>Suggestions</h3>
+            <div id="suggestions"></div>
+        </section>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
