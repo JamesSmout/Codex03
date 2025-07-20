@@ -1,0 +1,108 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+section {
+    border: 1px solid #ccc;
+    padding: 1rem;
+}
+
+/* Timeline */
+#timeline {
+    display: flex;
+    overflow-x: auto;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.timeline-segment {
+    border: 1px solid #999;
+    padding: 0.5rem 1rem;
+    min-width: 60px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.timeline-segment.active {
+    background-color: #ffeeba;
+    border-color: #d39e00;
+}
+
+/* Fretboard */
+#fretboard {
+    display: grid;
+    grid-template-columns: repeat(22, 30px);
+    grid-template-rows: repeat(6, 30px);
+    gap: 2px;
+    background: #deb887;
+    padding: 5px;
+}
+
+.fret {
+    border: 1px solid #333;
+    background: #f5f5f5;
+    position: relative;
+    cursor: pointer;
+}
+
+.fret.selected {
+    background: #4287f5;
+}
+
+/* Chord info */
+#chord-names {
+    margin-top: 0.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    gap: 0.25rem;
+}
+
+.chord-option {
+    padding: 0.25rem;
+    border: 1px solid #999;
+    text-align: center;
+    cursor: pointer;
+}
+
+.chord-option.selected {
+    background-color: #c3e6cb;
+    border-color: #155724;
+}
+
+/* Suggestions */
+#suggestions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.suggestion {
+    border: 1px solid #999;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+.suggestion-details {
+    margin-top: 0.5rem;
+    display: none;
+}
+
+.suggestion.active .suggestion-details {
+    display: block;
+}
+
+@media (max-width: 600px) {
+    #fretboard {
+        grid-template-columns: repeat(22, 20px);
+        grid-template-rows: repeat(6, 20px);
+    }
+}
